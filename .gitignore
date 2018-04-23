@@ -1,0 +1,14 @@
+node_modules
+public/scripts/app.js
+build
+public/dist/
+src/tests/components/__snapshots__/
+.env.development
+.env.test
+package-lock.json
+yarn.lock
+.DS_Store
+public/.DS_Store
+public/images/.DS_Store
+coverage
+
