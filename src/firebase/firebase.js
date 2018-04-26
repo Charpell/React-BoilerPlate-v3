@@ -9,9 +9,15 @@ const config = {
   messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID
 };
 
-firebase.initializeApp(config);
+let database;
 
-const database = firebase.database();
+try {
+  firebase.initializeApp(config);
+  firebase.database();
+} catch (error) {
+  throw new Error('Firebase Enviroment Key is missing');
+}
+
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
 export { firebase, googleAuthProvider, database as default };
